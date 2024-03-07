@@ -1,0 +1,23 @@
+{
+  "name": "ipush-js",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "unpkg": "dist/index.global.js",
+  "jsdelivr": "dist/index.global.js",
+  "scripts": {
+    "dev": "nr tsup --watch",
+    "tsup": "tsup src/index.ts --format esm,cjs --dts --no-splitting --clean",
+    "build": "nr tsup",
+    "prepublishOnly": "nr build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/ws": "^8.5.10",
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3"
+  }
+}
